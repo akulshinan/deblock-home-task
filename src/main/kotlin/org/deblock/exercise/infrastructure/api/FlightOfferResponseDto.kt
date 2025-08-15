@@ -3,7 +3,7 @@ package org.deblock.exercise.infrastructure.api
 import com.fasterxml.jackson.annotation.JsonFormat
 import java.time.OffsetDateTime
 
-data class FlightOfferResponse(
+data class FlightOfferResponseDto(
     val airline: String,
     val supplier: String,
     val fare: String,

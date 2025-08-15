@@ -4,10 +4,10 @@ import io.github.resilience4j.circuitbreaker.CircuitBreakerRegistry
 import io.github.resilience4j.kotlin.circuitbreaker.executeSuspendFunction
 import java.math.BigDecimal
 import java.time.ZoneOffset
-import org.deblock.exercise.application.ports.SupplierPort
+import org.deblock.exercise.application.FlightSearchRequest
+import org.deblock.exercise.application.port.SupplierPort
 import org.deblock.exercise.domain.Airline
 import org.deblock.exercise.domain.FlightOffer
-import org.deblock.exercise.domain.FlightSearchRequest
 import org.deblock.exercise.domain.IataCode
 import org.deblock.exercise.domain.Money
 import org.deblock.exercise.domain.SupplierName
@@ -30,10 +30,10 @@ class CrazyAirSupplier(
                 departureDate = params.departureDate.toString(),
                 returnDate = params.returnDate.toString(),
                 passengerCount = params.passengers.value
-            ).map { it.toDomain(params) }
+            ).map { it.toDomain() }
         }
 
-    private fun CrazyAirResponse.toDomain(params: FlightSearchRequest): FlightOffer {
+    private fun CrazyAirResponse.toDomain(): FlightOffer {
         // didn't find clarification of the price, if it is price for all passengers or for one.
         //  I assume price for all passengers
         //  If price for only one we need to do something like

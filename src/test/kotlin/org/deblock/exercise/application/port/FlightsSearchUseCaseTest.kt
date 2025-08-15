@@ -1,4 +1,4 @@
-package org.deblock.exercise.application.ports
+package org.deblock.exercise.application.port
 
 import io.mockk.coEvery
 import io.mockk.coVerify
@@ -8,9 +8,12 @@ import java.time.OffsetDateTime
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.test.runTest
+import org.deblock.exercise.application.FlightSearchRequest
+import org.deblock.exercise.application.FlightsSearchUseCase
+import org.deblock.exercise.application.Found
+import org.deblock.exercise.application.NotFound
 import org.deblock.exercise.domain.Airline
 import org.deblock.exercise.domain.FlightOffer
-import org.deblock.exercise.domain.FlightSearchRequest
 import org.deblock.exercise.domain.IataCode
 import org.deblock.exercise.domain.Money
 import org.deblock.exercise.domain.PassengerCount

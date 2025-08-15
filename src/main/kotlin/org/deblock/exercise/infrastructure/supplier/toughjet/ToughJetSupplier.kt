@@ -6,10 +6,10 @@ import org.springframework.stereotype.Component
 import java.math.BigDecimal
 import java.time.Instant
 import java.time.ZoneOffset
-import org.deblock.exercise.application.ports.SupplierPort
+import org.deblock.exercise.application.FlightSearchRequest
+import org.deblock.exercise.application.port.SupplierPort
 import org.deblock.exercise.domain.Airline
 import org.deblock.exercise.domain.FlightOffer
-import org.deblock.exercise.domain.FlightSearchRequest
 import org.deblock.exercise.domain.IataCode
 import org.deblock.exercise.domain.Money
 import org.deblock.exercise.domain.SupplierName

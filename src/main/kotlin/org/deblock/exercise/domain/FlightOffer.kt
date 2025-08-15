@@ -2,7 +2,6 @@ package org.deblock.exercise.domain
 
 import java.math.BigDecimal
 import java.math.RoundingMode
-import java.time.LocalDate
 import java.time.OffsetDateTime
 
 @JvmInline
@@ -32,14 +31,6 @@ value class Money(val amount: BigDecimal) {
     fun rounded2() = Money(amount.setScale(2, RoundingMode.HALF_UP))
     operator fun times(multiplier: Int) = Money(amount.multiply(BigDecimal(multiplier)))
 }
-
-data class FlightSearchRequest(
-    val origin: IataCode,
-    val destination: IataCode,
-    val departureDate: LocalDate,
-    val returnDate: LocalDate,
-    val passengers: PassengerCount,
-)
 
 data class FlightOffer(
     val airline: Airline,

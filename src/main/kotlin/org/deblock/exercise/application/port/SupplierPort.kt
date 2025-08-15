@@ -1,7 +1,7 @@
-package org.deblock.exercise.application.ports
+package org.deblock.exercise.application.port
 
+import org.deblock.exercise.application.FlightSearchRequest
 import org.deblock.exercise.domain.FlightOffer
-import org.deblock.exercise.domain.FlightSearchRequest
 
 interface SupplierPort {
     val name: String

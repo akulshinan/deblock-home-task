@@ -1,9 +1,9 @@
-package org.deblock.exercise.application.ports
+package org.deblock.exercise.application
 
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.supervisorScope
-import org.deblock.exercise.domain.FlightSearchRequest
+import org.deblock.exercise.application.port.SupplierPort
 import org.springframework.stereotype.Service
 
 @Service

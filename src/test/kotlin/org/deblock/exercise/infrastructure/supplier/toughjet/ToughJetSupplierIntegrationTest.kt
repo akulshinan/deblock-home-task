@@ -5,7 +5,7 @@ import java.time.OffsetDateTime
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest
 import org.deblock.exercise.WithWireMock
-import org.deblock.exercise.domain.FlightSearchRequest
+import org.deblock.exercise.application.FlightSearchRequest
 import org.deblock.exercise.domain.IataCode
 import org.deblock.exercise.domain.PassengerCount
 import org.deblock.exercise.initializers.WireMockInstance

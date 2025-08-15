@@ -1,4 +1,4 @@
-package org.deblock.exercise.application.ports
+package org.deblock.exercise.application
 
 import org.deblock.exercise.domain.FlightOffer
 

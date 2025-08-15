@@ -4,11 +4,11 @@ import jakarta.validation.constraints.Max
 import jakarta.validation.constraints.Min
 import jakarta.validation.constraints.Pattern
 import java.time.LocalDate
-import org.deblock.exercise.application.ports.FlightsSearchUseCase
-import org.deblock.exercise.application.ports.Found
-import org.deblock.exercise.application.ports.NotFound
+import org.deblock.exercise.application.FlightSearchRequest
+import org.deblock.exercise.application.FlightsSearchUseCase
+import org.deblock.exercise.application.Found
+import org.deblock.exercise.application.NotFound
 import org.deblock.exercise.domain.FlightOffer
-import org.deblock.exercise.domain.FlightSearchRequest
 import org.deblock.exercise.domain.IataCode
 import org.deblock.exercise.domain.PassengerCount
 import org.springframework.format.annotation.DateTimeFormat
@@ -49,7 +49,7 @@ class FlightsController(
     }
 }
 
-private fun FlightOffer.toDto() = FlightOfferResponse(
+private fun FlightOffer.toDto() = FlightOfferResponseDto(
     airline = airline.value,
     supplier = supplier.value,
     fare = fare.rounded2().amount.toString(),
