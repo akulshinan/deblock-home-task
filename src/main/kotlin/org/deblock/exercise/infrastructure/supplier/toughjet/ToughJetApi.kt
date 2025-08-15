@@ -9,8 +9,8 @@ interface ToughJetApi {
     suspend fun search(
         @Query("from") from: String,
         @Query("to") to: String,
-        @Query("outboundDate") outboundDate: String, // ISO_LOCAL_DATE
-        @Query("inboundDate") inboundDate: String,   // ISO_LOCAL_DATE
+        @Query("outboundDate") outboundDate: String,
+        @Query("inboundDate") inboundDate: String,
         @Query("numberOfAdults") numberOfAdults: Int,
     ): List<ToughJetResponse>
 }
